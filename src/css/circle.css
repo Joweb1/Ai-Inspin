@@ -1,0 +1,19 @@
+.circleB {
+    width: 4em;
+    height: 4em;
+    background: conic-gradient(rgba(235, 245, 100, 1) 0% 25%, rgba(210, 100, 255, 1) 25% 50%, rgba(225, 245, 155, 1) 50% 75%, rgba(200, 100, 255, 1) 75% 100%);
+    opacity: .6;
+    filter: blur(13px);
+    border-radius: 50%;
+    position: fixed;
+    top: -20px;
+    left: -70px;
+    animation: rolt 2s linear infinite;
+}
+
+@keyframes rolt {
+    to {
+        transform: rotate(360deg);
+    }
+}
+

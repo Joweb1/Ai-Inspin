@@ -1,0 +1,202 @@
+@import url('./outfit/outfit.css');
+@import url('./lato.css');
+@import url('./fontawesome/css/all.css');
+@import url('./fontawesome/css/all.min.css');
+
+:root {
+    --mainC: rgba(7, 12, 20, 1);
+    --mainP: rgba(252, 252, 255, 1);
+    --textC: black;
+    --main: rgba(100, 120, 120, 1);
+    --gray: rgba(200, 180, 200, 0.5);
+    --grays: rgba(250, 240, 250, 0.5);
+    --white: rgb(252, 252, 248);
+    --borderC: rgba(55, 50, 55, .81);
+    --placeholder: rgba(55, 40, 55, 1);
+    --shadow: rgba(30, 5, 125, .3);
+    --containBorder: rgba(25, 20, 25, 0.9);
+}
+
+html,
+body {
+    background: var(--mainP);
+    margin: 0;
+    padding: 0;
+    display: block;
+    min-width: 100%;
+    width: 100%;
+    overflow: hidden;
+    -webkit-text-size-adjust: none;
+}
+
+* {
+    font-family: "outfit", sans-serif;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    color: var(--textC) !important;
+}
+
+a {
+    color: rgba(150, 60, 250, 1);
+    cursor: pointer;
+}
+*::-webkit-scrollbar{
+    width: 8px;
+
+}
+*::-webkit-scrollbar-track{
+    background:transparent;
+    border-radius: 30px;
+    border: 1px solid rgba(120, 120, 120, 0.1);
+}
+*::-webkit-scrollbar-thumb{
+    background: rgba(20, 20, 20,0.3);
+    border-radius: 30px;
+}
+*::-webkit-scrollbar-thumb:hover{
+    background: rgba(20, 20, 20,0.6);
+}
+
+
+.bodyM {
+    position: relative;
+    overflow: auto;
+    overflow-y: hidden;
+    scroll-snap-type: both mandatory;
+    /*-ms-overflow-style: transparent;/* IE and Edge */
+    /*scrollbar-width: 10px; */
+    width: 100vw;
+    /*height: 92.8vh;*/
+    height: 100vh;
+    background: var(--mainP);
+    margin: 0px;
+    padding: 6px 35px;
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    gap: 6.25vw;
+    box-sizing: border-box;
+    background-attachment: local;
+}
+
+section .containM {
+    scroll-snap-align: center center;
+    scroll-snap-stop: normal;
+}
+
+.containM {
+    position: relative;
+    margin: auto;
+    width: 98vw;
+    height: 98vh;
+    max-width: 600px;
+    background: var(--mainP);
+    border: 1px solid var(--containBorder);
+    border-radius: 25px;
+    counter-increment: items 1;
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: inset 0px 0px 33px rgba(20, 2, 10, .051), inset -1px -2px 15px rgba(20, 2, 10, .051);
+}
+
+.containM:after {
+    background: linear-gradient(to right, #0000 15%, #ffcd02 30%, #e84f47 50%, #65c1ac 95%);
+    position: absolute;
+    content: '';
+    height: 3px;
+    right: 19px;
+    left: 0;
+    top: 0.5px;
+    filter: blur(4px);
+}
+
+.containM:after {
+    content: counter();
+}
+
+.logoE {
+    position: fixed;
+    left: 8px;
+    top: 12px;
+    z-index: 99;
+}
+
+.logoE h1 {
+    line-height: 60px;
+    /*text-shadow:0px 0px 10px rgba(220,30,250,.6);*/
+    text-align: left;
+    margin: 0px 20px;
+    font-size: 28px;
+    /*color:rgba(255,255,255,.4);*/
+    white-space: nowrap;
+    letter-spacing: -0.5px;
+    /*background-image:white;
+        	 linear-gradient(180deg,rgba(250,240,255,.8) 36%, rgba(255,255,255,1) , rgba(250,240,255,.5) 65%);
+        	background-clip: text;
+        	-webkit-background-clip: text;*/
+    color: white;
+    opacity: 0.95;
+    filter: blur(0px);
+}
+
+
+@media (min-width: 500px) {
+
+    .bodyM::-webkit-scrollbar,
+    .containM::-webkit-scrollbar {
+        display: none;
+    }
+
+    .bodyM {
+        gap: 30vw;
+        padding: 0 30vw;
+    }
+
+    .containM {
+        margin: 300px;
+        z-index: 1;
+    }
+
+    .introT {
+        margin-top: 5vh;
+    }
+
+    .con-ID {
+        scale: 1.1;
+    }
+
+    .headId {
+        scale: 1.1;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+
+    .circleC {
+        position: absolute;
+        margin-top: -7px;
+        margin-right: -4px;
+        z-index: 2;
+    }
+
+    /*.pie {
+       		--c:rgba(250,250,255,.8);
+        }*/
+}
+
+@media (min-width: 650px) {
+    .logoE {
+        position: fixed;
+        left: 8px;
+        top: 12px;
+        z-index: 99;
+        background: rgba(250, 250, 255, 0.9);
+        border-radius: 5px;
+        backdrop-filter: blur(2px);
+        box-shadow: 0px 0px 4px rgba(25, 25, 25, 0.2);
+        left: 5vw;
+        top: 15px;
+        padding: 0px 10px;
+    }
+}

@@ -1,0 +1,146 @@
+#introView {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    overflow: auto;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(80deg, rgba(250, 250, 250, .051) 15%, rgba(250, 250, 0, .051) 30%, rgba(250, 0, 10, .051) 50%, rgba(0, 250, 250, .051) 95%) !important;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(20px);
+    transition: .6s;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0) translate(0vw, 0vh);
+    z-index: 99;
+    font-size: 18px;
+}
+
+#introPage p {
+    font-size: 14px;
+}
+
+#introView.display {
+    visibility: visible;
+    transform: scale(1) translate(0vw, 0vh);
+    opacity: 1;
+}
+
+#introView.scrollOut {
+    visibility: hidden;
+    transform: scale(1) translate(-100vw, 0vh);
+}
+
+#introView p {
+    font-size: 14px;
+}
+
+#introView .introLogo {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    width: 100vw;
+    text-align: center;
+}
+
+#introView .introLogo img {
+    width: 100px;
+    margin: 0px auto;
+}
+
+#introView .introLogo .wel {
+    font-size: 22px;
+    margin: 10px auto;
+}
+
+#introView .btnSign {
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+#introView .btnSign div {
+    display: flex;
+    position: relative;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 10px 20px;
+    width: 75vw;
+    transition: .4s;
+}
+
+#introView .btnSign div:hover {
+    background: rgba(80, 50, 60, .2);
+}
+
+#introView .or {
+    font-size: 14px;
+    position: relative;
+    margin: 15px auto;
+    padding: 1px auto;
+    text-align: center;
+    backdrop-filter: blur(21px);
+    border-radius: 50px;
+    z-index: 9;
+}
+
+#introView .hr {
+    margin: 20px 10px;
+}
+
+#introView .btnSign div p {
+    text-align: center;
+    flex-grow: 2;
+    margin: auto;
+    margin-left: -25px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#introView .bySign {
+    text-align: center;
+    font-size: 12px;
+    margin: 0px 20px;
+    line-height: 20px;
+    letter-spacing: .3px;
+    cursor: pointer;
+}
+
+.signBottom {
+    position: absolute;
+    font-size: 14px;
+    padding: 10px 0px;
+    bottom: 0px;
+    /*background:red;*/
+    margin: auto 0px;
+    width: 100vw;
+    cursor:pointer;
+}
+
+.signBottom div {
+    padding: auto 20px;
+    margin: 18px auto;
+    text-align: center;
+    letter-spacing: .3px;
+}
+
+.signBottom hr {
+    padding: auto;
+    border-color: black;
+    border-width: 1px;
+    opacity: 0.3;
+}
+
+@media (max-height: 520px) {
+    .signBottom {
+        position: relative;
+    }
+}

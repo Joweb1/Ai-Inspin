@@ -1,0 +1,53 @@
+.editFeature {
+    position: fixed;
+    top: 30vh;
+    width: 60px;
+    background: rgba(250, 250, 250, .6);
+    padding: auto;
+    overflow: hidden;
+    z-index: 9;
+    opacity: .2;
+    visibility: hidden;
+    transform: translateX(-80px);
+    border-radius: 0px 10px 10px 0px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    transition: .8s;
+}
+
+/*.editFeature:hover {
+    width: 230px;
+    opacity: 0.9;
+}*/
+.editFeature.acting{
+    width: 230px;
+    opacity: 0.9;
+}
+.editFeature div {
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+    width: 230px;
+    margin: auto;
+    padding: auto;
+    padding-left: 20px;
+    padding-top: 20px;
+    height: 40px;
+    border-bottom: 1px solid rgba(10, 10, 10, .5);
+    transition: .4s;
+    background: linear-gradient(80deg, rgba(250, 250, 250, .051) 15%, rgba(250, 250, 0, .051) 30%, rgba(250, 0, 10, .051) 50%, rgba(0, 250, 250, .051) 95%);
+}
+
+.editFeature div:hover {
+    background: rgba(80, 50, 60, .2);
+}
+
+.editFeature div i {
+    font-size: 23px;
+    min-width: 25px;
+}
+
+.showE {
+    visibility: visible;
+    transform: translateX(0px);
+}
