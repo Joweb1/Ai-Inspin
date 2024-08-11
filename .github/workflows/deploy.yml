@@ -54,5 +54,5 @@ jobs:
           server: ${{ secrets.AI_INSPIN_SERVER }}
           username: ${{ secrets.AI_INSPIN_USERNAME }}
           password: ${{ secrets.AI_INSPIN_PASSWORD }}
-          local-dir: ./dist
+          local-dir: /home/runner/work/Ai-Inspin/Ai-Inspin/dist
           protocol: 'ftp'
