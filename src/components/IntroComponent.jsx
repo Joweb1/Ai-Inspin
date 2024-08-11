@@ -25,7 +25,7 @@ function IntroComponent() {
         setShowSignIn(!showSignIn);
     }
     const OAuthLogin = () => {
-        const callbackUrl = `${window.location.origin}`;
+        const callbackUrl = `${window.location.href}`;
         const googleClientId = clientId;
         const targetUrl = `https://accounts.google.com/o/oauth2/auth?redirect_uri=${encodeURIComponent(callbackUrl)}&response_type=token&client_id=${googleClientId}&scope=openid%20email%20profile`;
         window.location.href = targetUrl;
