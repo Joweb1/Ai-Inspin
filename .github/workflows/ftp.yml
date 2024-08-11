@@ -1,19 +1,34 @@
-name: Deploy Changes to cPanel
+name: Deploy React App to cPanel
+
 on:
   push:
     branches:
       - main
+
 jobs:
-  FTP-Deploy-Action:
-    name: FTP-Deploy-Action
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v2.1.0
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install Node.js
+      uses: actions/setup-node@v3
       with:
-        fetch-depth: 2
-    - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        node-version: '16'  # Specify your Node.js version
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build the React app
+      run: npm run build
+
+    - name: Deploy to cPanel via FTP
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
         server: ${{ secrets.AI_INSPIN_SERVER }}
         username: ${{ secrets.AI_INSPIN_USERNAME }}
         password: ${{ secrets.AI_INSPIN_PASSWORD }}
+        dry-run: false
+        dangerous-clean-slate: true
