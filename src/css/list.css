@@ -1,0 +1,35 @@
+
+
+.actionB {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2px;
+    overflow: hidden;
+}
+
+.actionB .buttonG.regen p,
+.actionB .buttonG.regen i {
+    font-size: 14px !important;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 50px;
+    width: 30px;
+}
+
+/*.actionB .buttonG.regen:first-child {
+    flex-shrink: 2;
+}
+
+.actionB .buttonG.regen:last-child {
+    flex-shrink: 2;
+}*/
+
+#articleK {
+    font-size: 14px;
+}
+
+#errRequired {
+    color: red !important;
+    font-size: 12.5px;
+}

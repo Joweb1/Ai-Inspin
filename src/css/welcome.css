@@ -1,0 +1,137 @@
+.trashdT {
+    background: linear-gradient(80deg, rgba(250, 250, 250, .10) 15%, rgba(250, 250, 0, .10) 30%, rgba(250, 0, 10, .10)50%, rgba(0, 250, 250, .108) 95%) !important;
+    height:100%;
+    width:100%;
+    position:fixed;
+    left:0;
+    top:0;
+    backdrop-filter:blur(20px);
+    z-index:999;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+.trashdT .abt{
+    position:relative;
+    width:139px;
+    border-radius:40px;
+    padding:0 12px;
+    margin:1vh 0;
+    background:black;
+}
+.trashdT img{
+    margin-top:-30px;
+    width:3em;
+    opacity:1;
+    animation:slowp 3s linear;
+}
+@keyframes slowp{
+    20%{width:3.2em; opacity:.8;}
+    60%{width:2.8em; opacity:.5;}
+    80%{width:3.2em; opacity:.8;}
+}
+.trashdT h1{
+    font-size:30px;
+    font-weight:500;
+}
+.intro-text{
+/*background: linear-gradient(80deg, rgba(0, 120, 255, 1) , rgba(250, 0, 10, 1))!important;*/
+text-align:center;
+width: 0ch;
+font-size:26px;
+overflow: hidden;
+margin: 0 auto;
+white-space: nowrap;
+font-weight:500;
+/*backdrop-filter:blur(10px);*/
+letter-spacing:0.9px;
+background-clip: text !important;
+-webkit-background-clip: text;
+/*color: transparent !important;*/
+}
+.abt .intro-button{
+background: linear-gradient(80deg, rgba(0, 120, 255, 1) , rgba(250,250,250,1), rgba(20,20,20,1), rgba(250, 0, 10, 1))!important;
+text-align:center;
+width: 0ch;
+font-size:24px;
+overflow: hidden;
+margin: 0 auto;
+border-radius:30px;
+white-space: nowrap;
+font-weight:500;
+backdrop-filter:blur(2px);
+letter-spacing:0.9px;
+background-clip: text !important;
+-webkit-background-clip: text;
+color: transparent !important;
+animation: typeBt 2s steps(50) 1s forwards;
+}
+.trashdT .abtS{
+border-radius:40px;
+background:rgba(0,0,0,1);
+margin-top:5vh;
+box-shadow: 0 0 10px rgba(24, 24, 24,0.05) inset, 0px 0px 9px rgba(255,255,255,.7);
+opacity:1;
+transition:0.5s;
+animation:showG 4s linear;
+}
+.abtS:active {
+    scale:0.9;
+    opacity:1;
+}
+.abtS:hover{
+    opacity:1;
+    background:rgba(60,60,60,1);
+}
+.abtS .intro-button{
+background: rgba(255,255,255,1) !important;
+text-align:center;
+width: 10ch;
+font-size:23px;
+overflow: hidden;
+margin: 0px auto;
+border: none;
+border-radius:40px;
+padding:2px 20px;
+border:0px solid rgba(250,250,250,1);
+white-space: nowrap;
+font-weight:600;
+backdrop-filter:blur(2px);
+letter-spacing:0.9px;
+background-clip: text !important;
+-webkit-background-clip: text;
+color: transparent !important;
+cursor:pointer;
+}
+@keyframes typeIn {
+to { width: 17ch; }
+}
+@keyframes typeBt {
+to { width: 18ch; }
+}
+.intro-text.active{
+animation: typeIn 2s steps(50) 1s forwards;
+}
+.blac {
+    width:85%;
+    margin-top:20px;
+}
+.gemini {
+    margin:5vh 0;
+    font-size:32px;
+    text-align:center;
+    font-weight:500;
+    opacity:1;
+    animation:showG 4s linear;
+}
+@keyframes showG {
+    from{ opacity:0;}
+}
+.gemini span{
+    line-height:40px;
+    font-size:20px;
+}
+.gemini span:first-child {
+    font-size:26px;
+}

@@ -1,0 +1,38 @@
+.loadContain{
+    position: fixed;
+    background: linear-gradient(80deg, rgba(250, 250, 250, .051) 15%, rgba(250, 250, 0, .051) 30%, rgba(250, 0, 10, .051) 50%, rgba(0, 250, 250, .051) 95%) !important;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(15px);
+    transition: .8s;
+    z-index: 99;
+    transform: scale(1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: showing 2s linear;
+}
+@keyframes showing {
+    from{backdrop-filter: blur(1px);}
+}
+.loadCircle{
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+.loader{
+    background: linear-gradient(80deg,rgba(250, 250, 0, 1), rgba(50, 100, 255, 1) 15%, rgba(250, 0, 10, 1) 40%, rgba(0, 250, 250, 1) 70%, rgba(250, 250, 0, 1) 90%);
+    background-position: 0vw;
+    padding: 3px 0;
+    border-radius: 30px;
+    width: 50vw;
+    border: 1px solid white;
+    opacity: 0.9;
+    animation: loadingbar 1.5s linear infinite forwards ;
+}   
+@keyframes loadingbar {
+    to{background-position:50vw;}
+}
