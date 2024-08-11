@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../ai-inspin-api"
+		},
+		{
+			"path": "../../Users/USER/Documents/public"
+		},
+		{
+			"path": "../ai-inspin-app"
+		}
+	],
+	"settings": {}
+}
