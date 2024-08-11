@@ -1,0 +1,48 @@
+# Ensure the application uses HTTPS
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Redirect all HTTP requests to HTTPS
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Serve correct MIME types for JavaScript files
+    AddType application/javascript .js
+    AddType application/javascript .mjs
+
+    # React Router: Handle client-side routing
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.html [L]
+
+    # Optional: Caching
+    <IfModule mod_expires.c>
+        ExpiresActive On
+        ExpiresByType text/html "access 600 seconds"
+        ExpiresByType image/gif "access plus 1 month"
+        ExpiresByType image/jpeg "access plus 1 month"
+        ExpiresByType image/png "access plus 1 month"
+        ExpiresByType text/css "access plus 1 week"
+        ExpiresByType application/javascript "access plus 1 week"
+        ExpiresByType text/javascript "access plus 1 week"
+        ExpiresByType application/x-javascript "access plus 1 week"
+        ExpiresDefault "access plus 2 days"
+    </IfModule>
+
+    # Optional: Gzip compression
+    <IfModule mod_deflate.c>
+        AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript
+        BrowserMatch ^Mozilla/4 gzip-only-text/html
+        BrowserMatch ^Mozilla/4\.0[678] no-gzip
+        BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+        Header append Vary User-Agent
+    </IfModule>
+
+    # Optional: CORS headers (for API calls or fonts)
+    <IfModule mod_headers.c>
+        Header set Access-Control-Allow-Origin "*"
+    </IfModule>
+</IfModule>
+
+# Custom error documents
+ErrorDocument 404 /index.html
