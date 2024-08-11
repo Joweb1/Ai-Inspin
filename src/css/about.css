@@ -81,7 +81,7 @@ color: white !important;
 }
 
 .xclose:active {
-scale: 0.8;
+scale: 0.85;
 }
 .xclose:hover  {
 background:red;
