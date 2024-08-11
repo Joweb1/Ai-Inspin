@@ -98,4 +98,4 @@ jobs:
           username: ${{ secrets.AI_INSPIN_USERNAME }}
           password: ${{ secrets.AI_INSPIN_PASSWORD }}
           local-dir: ./app/
-          protocol: 'ftp
+          protocol: 'ftp'
