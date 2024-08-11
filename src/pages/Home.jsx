@@ -69,7 +69,7 @@ const Home = () => {
       getUserDetails(accessToken);
       setToken(accessToken);
       setStateError(true);
-      navigate("/")
+      navigate("./")
       setErrorContent("Login successful.");
       wait(5500).then(()=>setStateError(false))
     }
