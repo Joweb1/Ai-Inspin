@@ -42,7 +42,7 @@ a {
     cursor: pointer;
 }
 *::-webkit-scrollbar{
-    width: 8px;
+    width: 1px;
 
 }
 *::-webkit-scrollbar-track{
@@ -186,6 +186,22 @@ section .containM {
 }
 
 @media (min-width: 650px) {
+    *::-webkit-scrollbar{
+    width: 8px;
+
+}
+*::-webkit-scrollbar-track{
+    background:transparent;
+    border-radius: 30px;
+    border: 1px solid rgba(120, 120, 120, 0.1);
+}
+*::-webkit-scrollbar-thumb{
+    background: rgba(20, 20, 20,0.3);
+    border-radius: 30px;
+}
+*::-webkit-scrollbar-thumb:hover{
+    background: rgba(20, 20, 20,0.6);
+}
     .logoE {
         position: fixed;
         left: 8px;
