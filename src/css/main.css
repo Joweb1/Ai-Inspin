@@ -62,7 +62,7 @@ a {
 }
 
 section .containM {
-    scroll-snap-align: center start;
+    scroll-snap-align: start;
     scroll-snap-stop: normal;
 }
 
