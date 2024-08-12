@@ -27,7 +27,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: production-files
-          path: ./public
+          path: ./dist
 
   deploy:
     name: Deploy
@@ -39,7 +39,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: production-files
-          path: ./public
+          path: ./dist
 
       - name: Deploy to cPanel via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
@@ -47,5 +47,5 @@ jobs:
           server: ${{ secrets.AI_INSPIN_SERVER }}
           username: ${{ secrets.AI_INSPIN_USERNAME }}
           password: ${{ secrets.AI_INSPIN_PASSWORD }}
-          local-dir: ./public/
+          local-dir: ./dist/
           protocol: 'ftp'
