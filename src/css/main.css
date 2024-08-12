@@ -35,6 +35,10 @@ body {
     margin: 0;
     padding: 0;
     color: var(--textC) !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.0); /* Red highlight with 50% opacity */
+}
+ *::-webkit-tap-highlight-color{
+     rgba(0, 0, 0, 0); /* Red highlight with 50% opacity */
 }
 
 a {
