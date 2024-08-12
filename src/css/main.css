@@ -62,7 +62,7 @@ a {
 }
 
 section .containM {
-    scroll-snap-align:start center;
+    scroll-snap-align:center center;
     scroll-snap-stop: normal;
 }
 
@@ -70,8 +70,9 @@ section .containM {
     position: relative;
     margin: auto;
     width: 98vw; 
-    height: 100%;
+    height: 98%;
     margin-bottom:6px;
+    /*margin-top:6px;*/
     max-width: 600px;
     background: var(--mainP);
     border: 1px solid var(--containBorder);
