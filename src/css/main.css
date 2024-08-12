@@ -50,7 +50,7 @@ a {
     /*-ms-overflow-style: transparent;/* IE and Edge */
     /*scrollbar-width: 10px; */
     width: 100vw;
-    height: 100%;
+    height: 90vh;
     background: var(--mainP);
     margin: 0px;
     padding: 6px 35px;
@@ -62,7 +62,7 @@ a {
 }
 
 section .containM {
-    scroll-snap-align: start;
+    scroll-snap-align:center start;
     scroll-snap-stop: normal;
 }
 
