@@ -11,6 +11,9 @@
 		},
 		{
 			"path": "../ai-inspin-app"
+		},
+		{
+			"path": "../ai-inspin-web"
 		}
 	],
 	"settings": {}

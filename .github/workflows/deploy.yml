@@ -40,7 +40,8 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: production-files
-          path: ./app
+
+        path: ./app
 
       - name: Deploy to cPanel via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
