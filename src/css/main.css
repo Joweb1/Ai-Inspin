@@ -51,7 +51,6 @@ a {
     /*scrollbar-width: 10px; */
     width: 100vw;
     height: 92.8vh;
-    height: 100vh;
     background: var(--mainP);
     margin: 0px;
     padding: 6px 35px;
@@ -71,7 +70,7 @@ section .containM {
     position: relative;
     margin: auto;
     width: 98vw;
-    height: 98vh;
+    height: 100%;
     max-width: 600px;
     background: var(--mainP);
     border: 1px solid var(--containBorder);
